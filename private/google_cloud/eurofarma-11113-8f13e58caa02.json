@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "eurofarma-11113",
+  "private_key_id": "8f13e58caa02846f15e4eca1c9a7d471010f2c13",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDMi2p+qxIAmLWA\n3HmW/ZQOp+ia6jiHYT0X+oG8sWpS4jaAPl5qWSZH+ifBttYM79vIKVgmgNvtQwFu\nL48q016Ijv0zh8f7RqfOrzvSjYVfdOs5t5xc7ze5UTUsFzrAEhVfRj2/swe/m+pZ\nCbbPm19v0kiZjucxwfkDTUI03UtFgxkYsrdNafZ/0YI1cln+xDmNkwYel0Nogxul\n4g36qzyqkVp7IRqVgnT0qWeRFV914q8PT3ndGsh+57gTZ8jo3nutnAwH50WdT2lc\n5c2SmThHCNzb/UT7wFmhpFn9RrYXnN82CQihT/sgfzbDYnS3ZbYFj9fe4WOwIBDJ\nAkalRVD7AgMBAAECggEAC3gn0mQk9XFFVYKcs3Q9ne1utBJnyrjk9ELA4plE1Sfy\nbBIojihjO/b8IrcYso9X5hXiElVNv7SZpcQ3RWymaNwyY3YnfGCzs88Mo4ZO+7wd\nHSvoBygHb7Xs2C+R75zeo5csiuLEOktzrRFyiu/zPocZOLm+ygH5RLpLeOu4YZ8v\nbm/CqEmFvWNNffP6G8/5m0Xk44wqXGCaVXxuTJiBblkrswJU9JkPrXjiS/mwlcPL\nM2v3XEmhq3ehyME/0c3h/rtEXaoYiEBcgqDrEtJ6O7yvspVy0OIq+sRtV1e8rpfu\nloKgnNjqkIfff+5cJk0QklGzawJaOrtysJhBRugYgQKBgQDpwoi5VznbQfbLsRbt\nvyI2sZA8Gpmv2LEy0neub8Vyp3zIm4KEegkhQHJaQB9JVvDHx3iP880Mw91INkFz\nS8QyJfaKNCNv5sbaSe52geQleF0CwZBg2zavCLJ614vS9f3cJIQnreB8szyNPfni\n1zEZW/T43hKv5yGITd3BABcXgQKBgQDgAVAObAuT8GXQrk7bIcbDmYdzeZbsN3R3\nDF6sVSSZnjZ7FMgkj72H9eQxPMKLDa1Mow01Pu6BxpV0igcexgb4P5XHnHGPicVP\nXjITPkB0JX0W43xi8t/xJbqKQXw8OAtxAydKG+hgf6TofKb+bzVx95jSn5LnNrlx\nx44j36AGewKBgQDYgdFYuK1hoqsO5iqycUEjHzrUMF8AO9eDluQ6sFNUakRtGXu9\nb7pdDe/cH1/a8ad5ogrMaacVl6OwanAcdaR2PismvjvEPR8YtzkikhPZkK21C8rJ\nqr/vRkLo/BMJhcVmzHuKtMUjOm9u8mQr8dwL/NvcVPNB8PVh5ZzqUUcSAQKBgQCL\nHMWW70qRaW4Rlu6p7+P8fVA9SnmL4TSW6juxUn8UV8kFzvYsnofZ877vRQicSrYh\nLfF568c7GRSf90hMuDaD3RkrieCMf8blb14xzStB9jYlDMmmuaaRoBik295Hl5aj\nbI3t3D8IDr1fFGqxAGd0i4uA4lDc/oNUQdXoOWysGQKBgHmIXP7BlO7Md7/rIyPt\nURTZypgo4hpVK99ylLs8+XNKhR/9xdBZMMcg6dqCjWSaoBpguUWxbU/07U82Aqbq\nory/kkUJFiTg20NpR2wN60uFrLchYN2HC/LqEx/uqLY8+bwaBq9eTwMPgfdgasgH\nRFzn83yE0QXqetfn40ZrBdQY\n-----END PRIVATE KEY-----\n",
+  "client_email": "veeva-migracao@eurofarma-11113.iam.gserviceaccount.com",
+  "client_id": "108590989406213979187",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/veeva-migracao%40eurofarma-11113.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

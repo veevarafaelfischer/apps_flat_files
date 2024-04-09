@@ -1,0 +1,1 @@
+"C:\Pentaho\pdi-ce-8.3.0.0-371\data-integration\kitchen.bat" /file:D:\ETL\pentaho\process\network\reports\apps_flat_files\reports_apps_flat_files.kjb /level:Detailed /logfile:D:\ETL\pentaho\process\network\reports\apps_flat_files\logs\logs.txt
