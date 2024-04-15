@@ -6655,3 +6655,416 @@
 2024/04/07 06:00:39 - Kitchen - ERROR (version 8.3.0.0-371, build 8.3.0.0-371 from 2019-06-11 11.09.08 by buildguy) : Finished with errors
 2024/04/07 06:00:39 - Kitchen - Start=2024/04/07 06:00:24.708, Stop=2024/04/07 06:00:39.850
 2024/04/07 06:00:39 - Kitchen - Processing ended after 15 seconds.
+2024/04/14 06:00:21 - Kitchen - Logging is at level : Detailed
+2024/04/14 06:00:21 - Kitchen - Start of run.
+2024/04/14 06:00:34 - Reports - Apps Flat Files - Start of job execution
+2024/04/14 06:00:34 - Carte - Installing timer to purge stale objects after 1440 minutes.
+2024/04/14 06:00:34 - Reports - Apps Flat Files - exec(0, 0, Start.0)
+2024/04/14 06:00:34 - Start - Starting job entry
+2024/04/14 06:00:34 - Reports - Apps Flat Files - Starting entry [Files CSV e Zip - Python]
+2024/04/14 06:00:34 - Reports - Apps Flat Files - exec(1, 0, Files CSV e Zip - Python.0)
+2024/04/14 06:00:34 - Files CSV e Zip - Python - Starting job entry
+2024/04/14 06:00:34 - Files CSV e Zip - Python - Found 0 previous result rows
+2024/04/14 06:00:34 - Files CSV e Zip - Python - Running on platform : Windows Server 2022
+2024/04/14 06:00:34 - Files CSV e Zip - Python - Executing command : cmd.exe /C "C:\Users\ADMINI~1\AppData\Local\Temp\kettle_7458a75e-fa3d-11ee-9c23-29f62455a6eeshell.bat"
+2024/04/14 06:00:34 - Files CSV e Zip - Python - (stdout) 
+2024/04/14 06:00:34 - Files CSV e Zip - Python - (stdout) C:\Pentaho\pdi-ce-8.3.0.0-371\data-integration>"C:\Python\Python39\python.exe" "D:\ETL\pentaho\process\network\reports\apps_flat_files\flatfiles_export_opendata_record_merged_brazil.py" 
+2024/04/14 06:00:37 - Files CSV e Zip - Python - ERROR (version 8.3.0.0-371, build 8.3.0.0-371 from 2019-06-11 11.09.08 by buildguy) : (stderr) D:\ETL\pentaho\process\network\reports\apps_flat_files\flatfiles_export_opendata_record_merged_brazil.py:56: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+2024/04/14 06:00:37 - Files CSV e Zip - Python - ERROR (version 8.3.0.0-371, build 8.3.0.0-371 from 2019-06-11 11.09.08 by buildguy) : (stderr)   df_date = pd.read_sql(sql_text, sql.getConn())
+2024/04/14 06:00:39 - Files CSV e Zip - Python - (stdout) Iniciando...
+2024/04/14 06:00:39 - Files CSV e Zip - Python - (stdout) Iniciando criacao do arquivo csv:  D:\ETL\pentaho\files\network\reports\apps_flat_files\csv\OpenData - Record Merged Brazil_1.csv
+2024/04/14 06:00:39 - Files CSV e Zip - Python - (stdout) VID MIN:  832743150496793607  -> MAX:  943718004849644319
+2024/04/14 06:00:39 - Files CSV e Zip - Python - (stdout) Iniciando criacao do arquivo zip:  D:\ETL\pentaho\files\network\reports\apps_flat_files\zip\OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-04-14_06-00-38.zip
+2024/04/14 06:00:39 - Files CSV e Zip - Python - (stdout) ZIP criado com sucesso
+2024/04/14 06:00:39 - Files CSV e Zip - Python - (stdout) 
+2024/04/14 06:00:39 - Files CSV e Zip - Python - (stdout) C:\Pentaho\pdi-ce-8.3.0.0-371\data-integration>"C:\Python\Python39\python.exe" "D:\ETL\pentaho\process\network\reports\apps_flat_files\flatfiles_export_opendata_basic_data_doctors_brazil.py" 
+2024/04/14 06:00:40 - Files CSV e Zip - Python - ERROR (version 8.3.0.0-371, build 8.3.0.0-371 from 2019-06-11 11.09.08 by buildguy) : (stderr) D:\ETL\pentaho\process\network\reports\apps_flat_files\flatfiles_export_opendata_basic_data_doctors_brazil.py:57: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+2024/04/14 06:00:40 - Files CSV e Zip - Python - ERROR (version 8.3.0.0-371, build 8.3.0.0-371 from 2019-06-11 11.09.08 by buildguy) : (stderr)   df_date = pd.read_sql(sql_text, sql.getConn())
+2024/04/14 06:02:47 - Files CSV e Zip - Python - (stdout) Iniciando...
+2024/04/14 06:02:47 - Files CSV e Zip - Python - (stdout) Iniciando criacao do arquivo csv:  D:\ETL\pentaho\files\network\reports\apps_flat_files\csv\OpenData Basic Data - Doctors Brazil_1.csv
+2024/04/14 06:02:47 - Files CSV e Zip - Python - (stdout) VID MIN:  832731070716724224  -> MAX:  943728380863845172
+2024/04/14 06:02:47 - Files CSV e Zip - Python - (stdout) Iniciando criacao do arquivo zip:  D:\ETL\pentaho\files\network\reports\apps_flat_files\zip\OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-04-14_06-02-04.zip
+2024/04/14 06:02:47 - Files CSV e Zip - Python - (stdout) ZIP criado com sucesso
+2024/04/14 06:02:47 - Files CSV e Zip - Python - Command cmd.exe /C "C:\Users\ADMINI~1\AppData\Local\Temp\kettle_7458a75e-fa3d-11ee-9c23-29f62455a6eeshell.bat" has finished
+2024/04/14 06:02:47 - Reports - Apps Flat Files - Starting entry [3s Basics]
+2024/04/14 06:02:47 - Reports - Apps Flat Files - exec(2, 0, 3s Basics.0)
+2024/04/14 06:02:47 - 3s Basics - Starting job entry
+2024/04/14 06:02:47 - 3s Basics - Let's wait now for: 3.0 Seconds...
+2024/04/14 06:02:50 - 3s Basics - Wait time is reached.
+2024/04/14 06:02:50 - Reports - Apps Flat Files - Starting entry [Send files to FTP]
+2024/04/14 06:02:50 - Reports - Apps Flat Files - exec(3, 0, Send files to FTP.0)
+2024/04/14 06:02:50 - Send files to FTP - Starting job entry
+2024/04/14 06:02:50 - Send files to FTP - Found 0 previous result rows
+2024/04/14 06:02:50 - Send files to FTP - Running on platform : Windows Server 2022
+2024/04/14 06:02:50 - Send files to FTP - Executing command : cmd.exe /C "C:\Users\ADMINI~1\AppData\Local\Temp\kettle_c55fc1bf-fa3d-11ee-9c23-29f62455a6eeshell.bat"
+2024/04/14 06:02:50 - Send files to FTP - (stdout) 
+2024/04/14 06:02:50 - Send files to FTP - (stdout) C:\Pentaho\pdi-ce-8.3.0.0-371\data-integration>"C:\Python\Python39\python.exe" "D:\ETL\pentaho\process\network\reports\apps_flat_files\flatfiles_ftp.py" 
+2024/04/14 06:02:55 - Send files to FTP - (stdout) FTP - Host encontrado:  ftp.biolabfarma.com.br
+2024/04/14 06:02:55 - Send files to FTP - (stdout) FTP - Login efetuado com sucesso.
+2024/04/14 06:02:55 - Send files to FTP - (stdout) D:\ETL\pentaho\files\network\reports\apps_flat_files\zip\OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-04-14_06-00-38.zip ( 622773 ) =>  226 Operation successful  =>  True
+2024/04/14 06:02:55 - Send files to FTP - (stdout) D:\ETL\pentaho\files\network\reports\apps_flat_files\zip\OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-04-14_06-02-04.zip ( 109777470 ) =>  226 Operation successful  =>  True
+2024/04/14 06:02:55 - Send files to FTP - (stdout) Arquivos do cliente:
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2023-11-06_15-49-07.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2023-11-12_06-00-26.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2023-11-19_06-00-28.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2023-11-26_06-00-27.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2023-12-03_06-00-29.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2023-12-10_06-00-31.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2023-12-17_06-00-33.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2023-12-24_06-00-35.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2023-12-31_06-00-36.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-01-07_06-00-36.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-01-14_06-00-37.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-01-21_06-00-33.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-01-28_06-00-31.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-02-04_06-00-32.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-02-11_06-00-34.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-02-18_06-00-32.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-02-25_06-00-32.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-03-03_06-00-33.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-03-10_06-00-36.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-04-14_06-00-38.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_943229845805143583_943420247390820800_2023-09-10-00-30-00.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_943229845805143583_943459883561260575_2023-09-17-00-30-00.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_943229845805143583_943499519733209536_2023-09-24-00-30-00.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_943229845805143583_943539155906533823_2023-10-01-00-30-00.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_943229845805143583_943578792079070752_2023-10-08-00-30-00.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_943229845805143583_943618428251413503_2023-10-15-00-30-00.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_943229845805143583_943658064426898847_2023-10-22-00-30-00.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_943229845805143583_943701591460550047_2023-10-29-16-59-30.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData - Record Merged Brazil_943229845805143583_943744635054070787_2023-11-06-08-26-03.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2023-11-06_15-50-10.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2023-11-12_06-01-24.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2023-11-19_06-01-30.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2023-11-26_06-01-34.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2023-12-03_06-01-35.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2023-12-10_06-01-40.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2023-12-17_06-01-40.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2023-12-24_06-01-46.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2023-12-31_06-01-43.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-01-07_06-01-43.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-01-14_06-01-44.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-01-21_06-01-37.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-01-28_06-01-36.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-02-04_06-01-39.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-02-11_06-01-44.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-02-18_06-01-37.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-02-25_06-01-41.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-03-03_06-01-42.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-03-10_06-01-42.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-04-14_06-02-04.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_943229812833130015_943420247390820799_2023-09-10-00-30-00.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_943229812833130015_943459883560212927_2023-09-17-00-30-00.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_943229812833130015_943499519733209535_2023-09-24-00-30-00.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_943229812833130015_943539155906533824_2023-10-01-00-30-00.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_943229812833130015_943578792079070751_2023-10-08-00-30-00.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_943229812833130015_943618428251018655_2023-10-15-00-30-00.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_943229812833130015_943658064426898848_2023-10-22-00-30-00.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_943229812833130015_943701600897668515_2023-10-29-17-01-54.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) - File: OpenData Basic Data - Doctors Brazil_943229812833130015_943744681322878367_2023-11-06-08-37-49.zip
+2024/04/14 06:02:55 - Send files to FTP - (stdout) FTP - Fechando conexao
+2024/04/14 06:02:55 - Send files to FTP - (stdout) FTP - Conexao fechada com sucesso
+2024/04/14 06:02:55 - Send files to FTP - (stdout) {
+2024/04/14 06:02:55 - Send files to FTP - (stdout)   "name": "spaces/AAAAAjcrv1A/messages/elisbyImqms.elisbyImqms",
+2024/04/14 06:02:55 - Send files to FTP - (stdout)   "sender": {
+2024/04/14 06:02:55 - Send files to FTP - (stdout)     "name": "users/114022495153014004089",
+2024/04/14 06:02:55 - Send files to FTP - (stdout)     "displayName": "Sucesso de Processos",
+2024/04/14 06:02:55 - Send files to FTP - (stdout)     "type": "BOT"
+2024/04/14 06:02:55 - Send files to FTP - (stdout)   },
+2024/04/14 06:02:55 - Send files to FTP - (stdout)   "createTime": "2024-04-14T09:02:55.195871Z",
+2024/04/14 06:02:55 - Send files to FTP - (stdout)   "text": "App FlatFiles - FTP - Processo finalizado com sucesso para o cliente: Biolab",
+2024/04/14 06:02:55 - Send files to FTP - (stdout)   "thread": {
+2024/04/14 06:02:55 - Send files to FTP - (stdout)     "name": "spaces/AAAAAjcrv1A/threads/elisbyImqms",
+2024/04/14 06:02:55 - Send files to FTP - (stdout)     "retentionSettings": {
+2024/04/14 06:02:55 - Send files to FTP - (stdout)       "state": "PERMANENT"
+2024/04/14 06:02:55 - Send files to FTP - (stdout)     }
+2024/04/14 06:02:55 - Send files to FTP - (stdout)   },
+2024/04/14 06:02:55 - Send files to FTP - (stdout)   "space": {
+2024/04/14 06:02:55 - Send files to FTP - (stdout)     "name": "spaces/AAAAAjcrv1A",
+2024/04/14 06:02:55 - Send files to FTP - (stdout)     "type": "ROOM",
+2024/04/14 06:02:55 - Send files to FTP - (stdout)     "displayName": "OpenData LatAm - Process Notifications",
+2024/04/14 06:02:55 - Send files to FTP - (stdout)     "spaceThreadingState": "THREADED_MESSAGES",
+2024/04/14 06:02:55 - Send files to FTP - (stdout)     "spaceType": "SPACE",
+2024/04/14 06:02:55 - Send files to FTP - (stdout)     "spaceHistoryState": "HISTORY_ON",
+2024/04/14 06:02:55 - Send files to FTP - (stdout)     "createTime": "2021-12-21T19:01:12.038730Z"
+2024/04/14 06:02:55 - Send files to FTP - (stdout)   },
+2024/04/14 06:02:55 - Send files to FTP - (stdout)   "argumentText": "App FlatFiles - FTP - Processo finalizado com sucesso para o cliente: Biolab",
+2024/04/14 06:02:55 - Send files to FTP - (stdout)   "retentionSettings": {
+2024/04/14 06:02:55 - Send files to FTP - (stdout)     "state": "PERMANENT"
+2024/04/14 06:02:55 - Send files to FTP - (stdout)   },
+2024/04/14 06:02:55 - Send files to FTP - (stdout)   "formattedText": "App FlatFiles - FTP - Processo finalizado com sucesso para o cliente: Biolab"
+2024/04/14 06:02:55 - Send files to FTP - (stdout) }
+2024/04/14 06:02:55 - Send files to FTP - (stdout) 
+2024/04/14 06:02:55 - Send files to FTP - Command cmd.exe /C "C:\Users\ADMINI~1\AppData\Local\Temp\kettle_c55fc1bf-fa3d-11ee-9c23-29f62455a6eeshell.bat" has finished
+2024/04/14 06:02:55 - Reports - Apps Flat Files - Starting entry [Notification FTP]
+2024/04/14 06:02:55 - Reports - Apps Flat Files - exec(4, 0, Notification FTP.0)
+2024/04/14 06:02:55 - Notification FTP - Starting job entry
+2024/04/14 06:02:55 - Notification FTP - Found 0 previous result rows
+2024/04/14 06:02:55 - Notification FTP - Running on platform : Windows Server 2022
+2024/04/14 06:02:55 - Notification FTP - Executing command : cmd.exe /C "C:\Users\ADMINI~1\AppData\Local\Temp\kettle_c8335420-fa3d-11ee-9c23-29f62455a6eeshell.bat"
+2024/04/14 06:02:55 - Notification FTP - (stdout) 
+2024/04/14 06:02:55 - Notification FTP - (stdout) C:\Pentaho\pdi-ce-8.3.0.0-371\data-integration>"D:\Python\notification\venv\Scripts\python.exe" "D:\Python\notification\SlackMessage.py" --canal="SUCCESS" --message="Reports - Apps Flat Files - Send Files to FTP - SUCCESS" 
+2024/04/14 06:02:57 - Notification FTP - (stdout) {
+2024/04/14 06:02:57 - Notification FTP - (stdout)   "name": "spaces/AAAAAjcrv1A/messages/sXee0viqIIk.sXee0viqIIk",
+2024/04/14 06:02:57 - Notification FTP - (stdout)   "sender": {
+2024/04/14 06:02:57 - Notification FTP - (stdout)     "name": "users/114022495153014004089",
+2024/04/14 06:02:57 - Notification FTP - (stdout)     "displayName": "Sucesso de Processos",
+2024/04/14 06:02:57 - Notification FTP - (stdout)     "type": "BOT"
+2024/04/14 06:02:57 - Notification FTP - (stdout)   },
+2024/04/14 06:02:57 - Notification FTP - (stdout)   "createTime": "2024-04-14T09:02:57.022463Z",
+2024/04/14 06:02:57 - Notification FTP - (stdout)   "text": "Reports - Apps Flat Files - Send Files to FTP - SUCCESS",
+2024/04/14 06:02:57 - Notification FTP - (stdout)   "thread": {
+2024/04/14 06:02:57 - Notification FTP - (stdout)     "name": "spaces/AAAAAjcrv1A/threads/sXee0viqIIk",
+2024/04/14 06:02:57 - Notification FTP - (stdout)     "retentionSettings": {
+2024/04/14 06:02:57 - Notification FTP - (stdout)       "state": "PERMANENT"
+2024/04/14 06:02:57 - Notification FTP - (stdout)     }
+2024/04/14 06:02:57 - Notification FTP - (stdout)   },
+2024/04/14 06:02:57 - Notification FTP - (stdout)   "space": {
+2024/04/14 06:02:57 - Notification FTP - (stdout)     "name": "spaces/AAAAAjcrv1A",
+2024/04/14 06:02:57 - Notification FTP - (stdout)     "type": "ROOM",
+2024/04/14 06:02:57 - Notification FTP - (stdout)     "displayName": "OpenData LatAm - Process Notifications",
+2024/04/14 06:02:57 - Notification FTP - (stdout)     "spaceThreadingState": "THREADED_MESSAGES",
+2024/04/14 06:02:57 - Notification FTP - (stdout)     "spaceType": "SPACE",
+2024/04/14 06:02:57 - Notification FTP - (stdout)     "spaceHistoryState": "HISTORY_ON",
+2024/04/14 06:02:57 - Notification FTP - (stdout)     "createTime": "2021-12-21T19:01:12.038730Z"
+2024/04/14 06:02:57 - Notification FTP - (stdout)   },
+2024/04/14 06:02:57 - Notification FTP - (stdout)   "argumentText": "Reports - Apps Flat Files - Send Files to FTP - SUCCESS",
+2024/04/14 06:02:57 - Notification FTP - (stdout)   "retentionSettings": {
+2024/04/14 06:02:57 - Notification FTP - (stdout)     "state": "PERMANENT"
+2024/04/14 06:02:57 - Notification FTP - (stdout)   },
+2024/04/14 06:02:57 - Notification FTP - (stdout)   "formattedText": "Reports - Apps Flat Files - Send Files to FTP - SUCCESS"
+2024/04/14 06:02:57 - Notification FTP - (stdout) }
+2024/04/14 06:02:57 - Notification FTP - (stdout) 
+2024/04/14 06:02:57 - Notification FTP - Command cmd.exe /C "C:\Users\ADMINI~1\AppData\Local\Temp\kettle_c8335420-fa3d-11ee-9c23-29f62455a6eeshell.bat" has finished
+2024/04/14 06:02:57 - Reports - Apps Flat Files - Starting entry [Send files to Google Cloud]
+2024/04/14 06:02:57 - Reports - Apps Flat Files - exec(5, 0, Send files to Google Cloud.0)
+2024/04/14 06:02:57 - Send files to Google Cloud - Starting job entry
+2024/04/14 06:02:57 - Send files to Google Cloud - Found 0 previous result rows
+2024/04/14 06:02:57 - Send files to Google Cloud - Running on platform : Windows Server 2022
+2024/04/14 06:02:57 - Send files to Google Cloud - Executing command : cmd.exe /C "C:\Users\ADMINI~1\AppData\Local\Temp\kettle_c94cb361-fa3d-11ee-9c23-29f62455a6eeshell.bat"
+2024/04/14 06:02:57 - Send files to Google Cloud - (stdout) 
+2024/04/14 06:02:57 - Send files to Google Cloud - (stdout) C:\Pentaho\pdi-ce-8.3.0.0-371\data-integration>"C:\Python\Python39\python.exe" "D:\ETL\pentaho\process\network\reports\apps_flat_files\flatfiles_google_cloud.py" 
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) 403 GET https://storage.googleapis.com/storage/v1/b?project=eurofarma-11113&projection=noAcl&prettyPrint=false: veeva-migracao@eurofarma-11113.iam.gserviceaccount.com does not have storage.buckets.list access to the Google Cloud project. Permission 'storage.buckets.list' denied on resource (or it may not exist).
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) 'charmap' codec can't encode character '\u0327' in position 30: character maps to <undefined>
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2023-11-06_15-49-07.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2023-11-12_06-00-26.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2023-11-19_06-00-28.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2023-11-26_06-00-27.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2023-12-03_06-00-29.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2023-12-10_06-00-31.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2023-12-17_06-00-33.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2023-12-24_06-00-35.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2023-12-31_06-00-36.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-01-07_06-00-36.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-01-14_06-00-37.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-01-21_06-00-33.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-01-28_06-00-31.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-02-04_06-00-32.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-02-11_06-00-34.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-02-18_06-00-32.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-02-25_06-00-32.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-03-03_06-00-33.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-03-10_06-00-36.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_943229845805143583_943380611213694497_2023-09-03-00-30-00.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_943229845805143583_943420247390820800_2023-09-10-00-30-00.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_943229845805143583_943459883561260575_2023-09-17-00-30-00.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_943229845805143583_943499519733209536_2023-09-24-00-30-00.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_943229845805143583_943539155906533823_2023-10-01-00-30-00.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_943229845805143583_943578792079070752_2023-10-08-00-30-00.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_943229845805143583_943618428251413503_2023-10-15-00-30-00.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_943229845805143583_943658064426898847_2023-10-22-00-30-00.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_943229845805143583_943701591460550047_2023-10-29-16-59-30.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_943229845805143583_943744635054070787_2023-11-06-08-26-03.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_943229845805143583_944490424053536895_2024-03-17-00-30-00.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_943229845805143583_944530060227776768_2024-03-24-00-30-00.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_943229845805143583_944569696403329280_2024-03-31-00-30-00.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData - Record Merged Brazil_943229845805143583_944609332571478143_2024-04-07-00-30-00.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2023-11-06_15-50-10.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2023-11-12_06-01-24.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2023-11-19_06-01-30.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2023-11-26_06-01-34.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2023-12-03_06-01-35.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2023-12-10_06-01-40.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2023-12-17_06-01-40.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2023-12-24_06-01-46.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2023-12-31_06-01-43.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-01-07_06-01-43.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-01-14_06-01-44.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-01-21_06-01-37.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-01-28_06-01-36.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-02-04_06-01-39.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-02-11_06-01-44.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-02-18_06-01-37.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-02-25_06-01-41.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-03-03_06-01-42.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-03-10_06-01-42.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_943229812833130015_943380611215530431_2023-09-03-00-30-00.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_943229812833130015_943420247390820799_2023-09-10-00-30-00.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_943229812833130015_943459883560212927_2023-09-17-00-30-00.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_943229812833130015_943499519733209535_2023-09-24-00-30-00.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_943229812833130015_943539155906533824_2023-10-01-00-30-00.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_943229812833130015_943578792079070751_2023-10-08-00-30-00.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_943229812833130015_943618428251018655_2023-10-15-00-30-00.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_943229812833130015_943658064426898848_2023-10-22-00-30-00.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_943229812833130015_943701600897668515_2023-10-29-17-01-54.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_943229812833130015_943744681322878367_2023-11-06-08-37-49.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_943229812833130015_944450787879950463_2024-03-10-00-30-00.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_943229812833130015_944530060227776767_2024-03-24-00-30-00.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_943229812833130015_944569696403329279_2024-03-31-00-30-00.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - (stdout) /opendata/OpenData Basic Data - Doctors Brazil_943229812833130015_944609332571478144_2024-04-07-00-30-00.zip
+2024/04/14 06:03:01 - Send files to Google Cloud - Command cmd.exe /C "C:\Users\ADMINI~1\AppData\Local\Temp\kettle_c94cb361-fa3d-11ee-9c23-29f62455a6eeshell.bat" has finished
+2024/04/14 06:03:01 - Reports - Apps Flat Files - Starting entry [Notification Google Cloud]
+2024/04/14 06:03:01 - Reports - Apps Flat Files - exec(6, 0, Notification Google Cloud.0)
+2024/04/14 06:03:01 - Notification Google Cloud - Starting job entry
+2024/04/14 06:03:01 - Notification Google Cloud - Found 0 previous result rows
+2024/04/14 06:03:01 - Notification Google Cloud - Running on platform : Windows Server 2022
+2024/04/14 06:03:01 - Notification Google Cloud - Executing command : cmd.exe /C "C:\Users\ADMINI~1\AppData\Local\Temp\kettle_cbb28fd2-fa3d-11ee-9c23-29f62455a6eeshell.bat"
+2024/04/14 06:03:01 - Notification Google Cloud - (stdout) 
+2024/04/14 06:03:01 - Notification Google Cloud - (stdout) C:\Pentaho\pdi-ce-8.3.0.0-371\data-integration>"D:\Python\notification\venv\Scripts\python.exe" "D:\Python\notification\SlackMessage.py" --canal="SUCCESS" --message="Reports - Apps Flat Files - Send files to Google Cloud - SUCCESS" 
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout) {
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)   "name": "spaces/AAAAAjcrv1A/messages/PNv82gOJ3Eg.PNv82gOJ3Eg",
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)   "sender": {
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)     "name": "users/114022495153014004089",
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)     "displayName": "Sucesso de Processos",
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)     "type": "BOT"
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)   },
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)   "createTime": "2024-04-14T09:03:02.843391Z",
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)   "text": "Reports - Apps Flat Files - Send files to Google Cloud - SUCCESS",
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)   "thread": {
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)     "name": "spaces/AAAAAjcrv1A/threads/PNv82gOJ3Eg",
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)     "retentionSettings": {
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)       "state": "PERMANENT"
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)     }
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)   },
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)   "space": {
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)     "name": "spaces/AAAAAjcrv1A",
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)     "type": "ROOM",
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)     "displayName": "OpenData LatAm - Process Notifications",
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)     "spaceThreadingState": "THREADED_MESSAGES",
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)     "spaceType": "SPACE",
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)     "spaceHistoryState": "HISTORY_ON",
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)     "createTime": "2021-12-21T19:01:12.038730Z"
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)   },
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)   "argumentText": "Reports - Apps Flat Files - Send files to Google Cloud - SUCCESS",
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)   "retentionSettings": {
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)     "state": "PERMANENT"
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)   },
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout)   "formattedText": "Reports - Apps Flat Files - Send files to Google Cloud - SUCCESS"
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout) }
+2024/04/14 06:03:03 - Notification Google Cloud - (stdout) 
+2024/04/14 06:03:03 - Notification Google Cloud - Command cmd.exe /C "C:\Users\ADMINI~1\AppData\Local\Temp\kettle_cbb28fd2-fa3d-11ee-9c23-29f62455a6eeshell.bat" has finished
+2024/04/14 06:03:03 - Reports - Apps Flat Files - Finished job entry [Notification Google Cloud] (result=[true])
+2024/04/14 06:03:03 - Reports - Apps Flat Files - Starting entry [Backup exists files]
+2024/04/14 06:03:03 - Reports - Apps Flat Files - exec(6, 0, Backup exists files.0)
+2024/04/14 06:03:03 - Backup exists files - Starting job entry
+2024/04/14 06:03:03 - Backup exists files - Processing row source File/folder source : [D:\ETL\pentaho\files\network\reports\apps_flat_files\zip\] ... destination file/folder : [D:\ETL\pentaho\files\network\reports\apps_flat_files\_backups]... wildcard : [null]
+2024/04/14 06:03:03 - Backup exists files -   
+2024/04/14 06:03:03 - Backup exists files - Fetching folder [file:///D:/ETL/pentaho/files/network/reports/apps_flat_files/zip]
+2024/04/14 06:03:03 - Backup exists files - File [file:///D:/ETL/pentaho/files/network/reports/apps_flat_files/zip/OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-04-14_06-00-38.zip] was moved to file:///D:/ETL/pentaho/files/network/reports/apps_flat_files/_backups/OpenData - Record Merged Brazil_832743150496793607_943718004849644319_2024-04-14_06-00-38.zip
+2024/04/14 06:03:03 - Backup exists files - File [file:///D:/ETL/pentaho/files/network/reports/apps_flat_files/zip/OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-04-14_06-02-04.zip] was moved to file:///D:/ETL/pentaho/files/network/reports/apps_flat_files/_backups/OpenData Basic Data - Doctors Brazil_832731070716724224_943728380863845172_2024-04-14_06-02-04.zip
+2024/04/14 06:03:03 - Backup exists files - Processing row source File/folder source : [D:\ETL\pentaho\files\network\reports\apps_flat_files\csv\] ... destination file/folder : [D:\ETL\pentaho\files\network\reports\apps_flat_files\_backups]... wildcard : [null]
+2024/04/14 06:03:03 - Backup exists files -   
+2024/04/14 06:03:03 - Backup exists files - Fetching folder [file:///D:/ETL/pentaho/files/network/reports/apps_flat_files/csv]
+2024/04/14 06:03:03 - Backup exists files - File [file:///D:/ETL/pentaho/files/network/reports/apps_flat_files/csv/OpenData - Record Merged Brazil_1.csv] was moved to file:///D:/ETL/pentaho/files/network/reports/apps_flat_files/_backups/OpenData - Record Merged Brazil_1.csv
+2024/04/14 06:03:03 - Backup exists files - File [file:///D:/ETL/pentaho/files/network/reports/apps_flat_files/csv/OpenData Basic Data - Doctors Brazil_1.csv] was moved to file:///D:/ETL/pentaho/files/network/reports/apps_flat_files/_backups/OpenData Basic Data - Doctors Brazil_1.csv
+2024/04/14 06:03:03 - Backup exists files - =======================================
+2024/04/14 06:03:03 - Backup exists files - Total files in error : 0
+2024/04/14 06:03:03 - Backup exists files - Total files successfully processed : 4
+2024/04/14 06:03:03 - Backup exists files - =======================================
+2024/04/14 06:03:03 - Reports - Apps Flat Files - Starting entry [Notification Backups]
+2024/04/14 06:03:03 - Reports - Apps Flat Files - exec(7, 0, Notification Backups.0)
+2024/04/14 06:03:03 - Notification Backups - Starting job entry
+2024/04/14 06:03:03 - Notification Backups - Found 0 previous result rows
+2024/04/14 06:03:03 - Notification Backups - Running on platform : Windows Server 2022
+2024/04/14 06:03:03 - Notification Backups - Executing command : cmd.exe /C "C:\Users\ADMINI~1\AppData\Local\Temp\kettle_ccf7ba03-fa3d-11ee-9c23-29f62455a6eeshell.bat"
+2024/04/14 06:03:03 - Notification Backups - (stdout) 
+2024/04/14 06:03:03 - Notification Backups - (stdout) C:\Pentaho\pdi-ce-8.3.0.0-371\data-integration>"D:\Python\notification\venv\Scripts\python.exe" "D:\Python\notification\SlackMessage.py" --canal="SUCCESS" --message="Reports - Apps Flat Files - Backup exists files - SUCCESS" 
+2024/04/14 06:03:05 - Notification Backups - (stdout) {
+2024/04/14 06:03:05 - Notification Backups - (stdout)   "name": "spaces/AAAAAjcrv1A/messages/Hf9Z8dVLibk.Hf9Z8dVLibk",
+2024/04/14 06:03:05 - Notification Backups - (stdout)   "sender": {
+2024/04/14 06:03:05 - Notification Backups - (stdout)     "name": "users/114022495153014004089",
+2024/04/14 06:03:05 - Notification Backups - (stdout)     "displayName": "Sucesso de Processos",
+2024/04/14 06:03:05 - Notification Backups - (stdout)     "type": "BOT"
+2024/04/14 06:03:05 - Notification Backups - (stdout)   },
+2024/04/14 06:03:05 - Notification Backups - (stdout)   "createTime": "2024-04-14T09:03:04.968303Z",
+2024/04/14 06:03:05 - Notification Backups - (stdout)   "text": "Reports - Apps Flat Files - Backup exists files - SUCCESS",
+2024/04/14 06:03:05 - Notification Backups - (stdout)   "thread": {
+2024/04/14 06:03:05 - Notification Backups - (stdout)     "name": "spaces/AAAAAjcrv1A/threads/Hf9Z8dVLibk",
+2024/04/14 06:03:05 - Notification Backups - (stdout)     "retentionSettings": {
+2024/04/14 06:03:05 - Notification Backups - (stdout)       "state": "PERMANENT"
+2024/04/14 06:03:05 - Notification Backups - (stdout)     }
+2024/04/14 06:03:05 - Notification Backups - (stdout)   },
+2024/04/14 06:03:05 - Notification Backups - (stdout)   "space": {
+2024/04/14 06:03:05 - Notification Backups - (stdout)     "name": "spaces/AAAAAjcrv1A",
+2024/04/14 06:03:05 - Notification Backups - (stdout)     "type": "ROOM",
+2024/04/14 06:03:05 - Notification Backups - (stdout)     "displayName": "OpenData LatAm - Process Notifications",
+2024/04/14 06:03:05 - Notification Backups - (stdout)     "spaceThreadingState": "THREADED_MESSAGES",
+2024/04/14 06:03:05 - Notification Backups - (stdout)     "spaceType": "SPACE",
+2024/04/14 06:03:05 - Notification Backups - (stdout)     "spaceHistoryState": "HISTORY_ON",
+2024/04/14 06:03:05 - Notification Backups - (stdout)     "createTime": "2021-12-21T19:01:12.038730Z"
+2024/04/14 06:03:05 - Notification Backups - (stdout)   },
+2024/04/14 06:03:05 - Notification Backups - (stdout)   "argumentText": "Reports - Apps Flat Files - Backup exists files - SUCCESS",
+2024/04/14 06:03:05 - Notification Backups - (stdout)   "retentionSettings": {
+2024/04/14 06:03:05 - Notification Backups - (stdout)     "state": "PERMANENT"
+2024/04/14 06:03:05 - Notification Backups - (stdout)   },
+2024/04/14 06:03:05 - Notification Backups - (stdout)   "formattedText": "Reports - Apps Flat Files - Backup exists files - SUCCESS"
+2024/04/14 06:03:05 - Notification Backups - (stdout) }
+2024/04/14 06:03:05 - Notification Backups - (stdout) 
+2024/04/14 06:03:05 - Notification Backups - Command cmd.exe /C "C:\Users\ADMINI~1\AppData\Local\Temp\kettle_ccf7ba03-fa3d-11ee-9c23-29f62455a6eeshell.bat" has finished
+2024/04/14 06:03:05 - Reports - Apps Flat Files - Finished job entry [Notification Backups] (result=[true])
+2024/04/14 06:03:05 - Reports - Apps Flat Files - Starting entry [Notification Final]
+2024/04/14 06:03:05 - Reports - Apps Flat Files - exec(7, 0, Notification Final.0)
+2024/04/14 06:03:05 - Notification Final - Starting job entry
+2024/04/14 06:03:05 - Notification Final - Found 0 previous result rows
+2024/04/14 06:03:05 - Notification Final - Running on platform : Windows Server 2022
+2024/04/14 06:03:05 - Notification Final - Executing command : cmd.exe /C "C:\Users\ADMINI~1\AppData\Local\Temp\kettle_ce0902f4-fa3d-11ee-9c23-29f62455a6eeshell.bat"
+2024/04/14 06:03:05 - Notification Final - (stdout) 
+2024/04/14 06:03:05 - Notification Final - (stdout) C:\Pentaho\pdi-ce-8.3.0.0-371\data-integration>"D:\Python\notification\venv\Scripts\python.exe" "D:\Python\notification\SlackMessage.py" --canal="SUCCESS" --message="Reports - Apps Flat Files - SUCCESS" 
+2024/04/14 06:03:06 - Notification Final - (stdout) {
+2024/04/14 06:03:06 - Notification Final - (stdout)   "name": "spaces/AAAAAjcrv1A/messages/bnDHaIQotdo.bnDHaIQotdo",
+2024/04/14 06:03:06 - Notification Final - (stdout)   "sender": {
+2024/04/14 06:03:06 - Notification Final - (stdout)     "name": "users/114022495153014004089",
+2024/04/14 06:03:06 - Notification Final - (stdout)     "displayName": "Sucesso de Processos",
+2024/04/14 06:03:06 - Notification Final - (stdout)     "type": "BOT"
+2024/04/14 06:03:06 - Notification Final - (stdout)   },
+2024/04/14 06:03:06 - Notification Final - (stdout)   "createTime": "2024-04-14T09:03:06.771455Z",
+2024/04/14 06:03:06 - Notification Final - (stdout)   "text": "Reports - Apps Flat Files - SUCCESS",
+2024/04/14 06:03:06 - Notification Final - (stdout)   "thread": {
+2024/04/14 06:03:06 - Notification Final - (stdout)     "name": "spaces/AAAAAjcrv1A/threads/bnDHaIQotdo",
+2024/04/14 06:03:06 - Notification Final - (stdout)     "retentionSettings": {
+2024/04/14 06:03:06 - Notification Final - (stdout)       "state": "PERMANENT"
+2024/04/14 06:03:06 - Notification Final - (stdout)     }
+2024/04/14 06:03:06 - Notification Final - (stdout)   },
+2024/04/14 06:03:06 - Notification Final - (stdout)   "space": {
+2024/04/14 06:03:06 - Notification Final - (stdout)     "name": "spaces/AAAAAjcrv1A",
+2024/04/14 06:03:06 - Notification Final - (stdout)     "type": "ROOM",
+2024/04/14 06:03:06 - Notification Final - (stdout)     "displayName": "OpenData LatAm - Process Notifications",
+2024/04/14 06:03:06 - Notification Final - (stdout)     "spaceThreadingState": "THREADED_MESSAGES",
+2024/04/14 06:03:06 - Notification Final - (stdout)     "spaceType": "SPACE",
+2024/04/14 06:03:06 - Notification Final - (stdout)     "spaceHistoryState": "HISTORY_ON",
+2024/04/14 06:03:06 - Notification Final - (stdout)     "createTime": "2021-12-21T19:01:12.038730Z"
+2024/04/14 06:03:06 - Notification Final - (stdout)   },
+2024/04/14 06:03:06 - Notification Final - (stdout)   "argumentText": "Reports - Apps Flat Files - SUCCESS",
+2024/04/14 06:03:06 - Notification Final - (stdout)   "retentionSettings": {
+2024/04/14 06:03:06 - Notification Final - (stdout)     "state": "PERMANENT"
+2024/04/14 06:03:06 - Notification Final - (stdout)   },
+2024/04/14 06:03:06 - Notification Final - (stdout)   "formattedText": "Reports - Apps Flat Files - SUCCESS"
+2024/04/14 06:03:06 - Notification Final - (stdout) }
+2024/04/14 06:03:06 - Notification Final - (stdout) 
+2024/04/14 06:03:06 - Notification Final - Command cmd.exe /C "C:\Users\ADMINI~1\AppData\Local\Temp\kettle_ce0902f4-fa3d-11ee-9c23-29f62455a6eeshell.bat" has finished
+2024/04/14 06:03:06 - Reports - Apps Flat Files - Starting entry [Success]
+2024/04/14 06:03:06 - Reports - Apps Flat Files - exec(8, 0, Success.0)
+2024/04/14 06:03:06 - Success - Starting job entry
+2024/04/14 06:03:06 - Reports - Apps Flat Files - Finished job entry [Success] (result=[true])
+2024/04/14 06:03:06 - Reports - Apps Flat Files - Finished job entry [Notification Final] (result=[true])
+2024/04/14 06:03:06 - Reports - Apps Flat Files - Finished job entry [Backup exists files] (result=[true])
+2024/04/14 06:03:06 - Reports - Apps Flat Files - Finished job entry [Send files to Google Cloud] (result=[true])
+2024/04/14 06:03:06 - Reports - Apps Flat Files - Finished job entry [Notification FTP] (result=[true])
+2024/04/14 06:03:06 - Reports - Apps Flat Files - Finished job entry [Send files to FTP] (result=[true])
+2024/04/14 06:03:06 - Reports - Apps Flat Files - Finished job entry [3s Basics] (result=[true])
+2024/04/14 06:03:06 - Reports - Apps Flat Files - Finished job entry [Files CSV e Zip - Python] (result=[true])
+2024/04/14 06:03:06 - Reports - Apps Flat Files - Job execution finished
+2024/04/14 06:03:06 - Kitchen - Finished!
+2024/04/14 06:03:06 - Kitchen - Start=2024/04/14 06:00:21.826, Stop=2024/04/14 06:03:06.963
+2024/04/14 06:03:06 - Kitchen - Processing ended after 2 minutes and 45 seconds (165 seconds total).
