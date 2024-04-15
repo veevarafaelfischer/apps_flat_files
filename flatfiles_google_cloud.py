@@ -3,7 +3,7 @@ from google.cloud import storage
 from _public.shared.sql import SQL
 from _public.shared.utils import *
 
-isDebug = True
+isDebug = False
 isList = True
 files_path = r"D:\ETL\pentaho\files\network\reports\apps_flat_files"
 credentials_path = r"D:\ETL\pentaho\process\network\reports\apps_flat_files\private\google_cloud"
