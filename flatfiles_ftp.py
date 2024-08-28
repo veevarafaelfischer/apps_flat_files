@@ -1,5 +1,8 @@
 from os import path, stat
 from ftplib import FTP_TLS, FTP
+
+import paramiko
+
 from _public.shared.sql import SQL
 from _public.shared.utils import *
 
@@ -20,11 +23,11 @@ blOk, lst_dados_acesso, total_itens = sql.itemsList('''
 		[config_client_data_access_ftp].[config_client_data_access_ftp_type_id] AS [ftp_type_id], 
 		[config_client_data_access_ftp].[remote_directory],
 		[config_client_data_access_ftp].[local_directory] 
-	FROM apps_opendata_flatfiles.[dbo].[config_client_data_access_ftp] 
-	INNER JOIN apps_opendata_flatfiles.dbo.config_client ON config_client.id = [config_client_data_access_ftp].config_client_id
+	FROM apps_opendata_flatfiles.[dbo].[config_client_data_access_ftp] WITH(NOLOCK)  
+	INNER JOIN apps_opendata_flatfiles.dbo.config_client WITH(NOLOCK)  ON config_client.id = [config_client_data_access_ftp].config_client_id
 		AND config_client.active = 1 
-	INNER JOIN apps_opendata_flatfiles.dbo.config_client_security ON config_client_security.config_client_id = [config_client].id 
-	INNER JOIN apps_opendata_flatfiles.dbo.config_client_data_access_ftp_type ON config_client_data_access_ftp_type.id = [config_client_data_access_ftp].config_client_data_access_ftp_type_id 
+	INNER JOIN apps_opendata_flatfiles.dbo.config_client_security WITH(NOLOCK)  ON config_client_security.config_client_id = [config_client].id 
+	INNER JOIN apps_opendata_flatfiles.dbo.config_client_data_access_ftp_type WITH(NOLOCK)  ON config_client_data_access_ftp_type.id = [config_client_data_access_ftp].config_client_data_access_ftp_type_id 
 		AND config_client_data_access_ftp_type.active = 1 
 	WHERE [config_client_data_access_ftp].active = 1 
 ''')
@@ -48,8 +51,8 @@ for dado_acesso in lst_dados_acesso:
 			SELECT DISTINCT
 				rel_config_client_data_access.id AS [rel_config_client_data_access_id],  
 				config_client_data_type.extension
-			FROM apps_opendata_flatfiles.dbo.rel_config_client_data_access
-			INNER JOIN apps_opendata_flatfiles.dbo.config_client_data_type ON config_client_data_type.id = rel_config_client_data_access.config_client_data_type_id
+			FROM apps_opendata_flatfiles.dbo.rel_config_client_data_access WITH(NOLOCK) 
+			INNER JOIN apps_opendata_flatfiles.dbo.config_client_data_type WITH(NOLOCK)  ON config_client_data_type.id = rel_config_client_data_access.config_client_data_type_id
 				AND config_client_data_type.active = 1
 			WHERE rel_config_client_data_access.config_client_id = {config_client_id}
 				AND rel_config_client_data_access.active = 1
@@ -63,63 +66,119 @@ for dado_acesso in lst_dados_acesso:
 			rel_config_client_data_access_id = dado_extension['rel_config_client_data_access_id']
 			extension = dado_extension['extension']
 			arr_files = get_files_paths(local_directory, 'csv' in extension, 'zip' in extension)
+			arr_files_upload = []
 
 			# Setado com dados de conexão com o servidor FTP
-			if ftp_type_id == 1:	#SFTP
-				ftp = FTP_TLS(host=ftp_host)
-				ftp.prot_p()	# Método relacionado a segurança TSL
-			else:	# elif FTP_TYPE_ID == 4:
-				ftp = FTP()
-				ftp.connect(host=ftp_host, port=ftp_port)
-			print('FTP - Host encontrado: ', ftp_host)
+			if ftp_type_id == 5:	#SFTP
+				client = paramiko.SSHClient()
+				client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+				client.connect(hostname=ftp_host, port=ftp_port, username=ftp_user, password=ftp_pwd, allow_agent=False, look_for_keys=False)
+				print('FTP - Login efetuado com sucesso para o cliente: ', config_client_id, ' => ', config_client_name)
 
-			ftp.login(user=ftp_user, passwd=ftp_pwd)
-			print('FTP - Login efetuado com sucesso.')
+				ftp = client.open_sftp()
+				print('Extensão configurada com sucesso.')
+
+				ftp.chdir(ftp_remote_directory)	# Mudança de diretório ftp para o diretorio principal
+				lst_arquivos_ftp = list(ftp.listdir(ftp_remote_directory))
+				arr_files_not_matched = [match for match in lst_arquivos_ftp if extension in match]
+
+				if isDebug is False:
+					arr_files_upload = [match for match in arr_files if extension in match]
+					arr_files_upload_verificador = arr_files_upload.copy()
+					# arr_files_upload = arr_files.copy()
+
+					for file_actual in arr_files_upload_verificador:
+						file_name = path.basename(file_actual)
+						if file_name in arr_files_not_matched:
+							arr_files_upload.remove(file_actual)
+
+					for file_upload in arr_files_upload:
+						file_name = path.basename(file_upload)
+						# file_size = stat(file_upload).st_size
+
+						# file = open(file_upload, 'rb')  # arquivo para enviar
+						result_upload_file_ftp = ftp.put(localpath=file_upload, remotepath=f"{ftp_remote_directory}/{file_name}", confirm=True) # envia o arquivo
+						file_size = result_upload_file_ftp.st_size
+						is_result_upload_file_ftp = (file_size > 0)
+
+						sql_text = rf'''
+											INSERT INTO [apps_opendata_flatfiles].[dbo].[log_file_sent_client] ([rel_config_client_data_access_id], [filename_sent], [file_size_sent], [remote_directory_sent], [status_result_ftp]) 
+											VALUES ({rel_config_client_data_access_id}, '{file_name}', '{file_size}', '{ftp_remote_directory}', '{result_upload_file_ftp}')
+										'''
+						blnOk_Upload, total_execucao, error = sql.itemExecute(sql_text)
+						print(file_upload, '(', file_size, ') => ', is_result_upload_file_ftp, result_upload_file_ftp, ' => ', blnOk_Upload)
+
+				if isList is True:
+					files = ''
+					lst_arquivos_ftp = list(ftp.listdir(ftp_remote_directory))
+					arr_files_not_matched = [match for match in lst_arquivos_ftp if extension in match]
+					for file_actual in arr_files_not_matched:
+						file_name = path.basename(file_actual)
+						files = files + '\n- File: ' + file_name
+					print('Arquivos do cliente:' + files)
+
+				# Fecha a conexao FTP
+				print('FTP - Fechando conexao')
+				ftp.close()
+				client.close()
+				print('FTP - Conexao fechada com sucesso')
+
+			else:
+				if ftp_type_id == 1:	#FTP com TLS
+					ftp = FTP_TLS(host=ftp_host)
+					ftp.prot_p()	# Método relacionado a segurança TSL
+
+				else:	# elif FTP_TYPE_ID == 4:
+					ftp = FTP()
+					ftp.connect(host=ftp_host, port=ftp_port)
+				print('FTP - Host encontrado: ', ftp_host)
+
+				ftp.login(user=ftp_user, passwd=ftp_pwd)
+				print('FTP - Login efetuado com sucesso.')
 
 
-			arr_files_upload = []
-			ftp.cwd(ftp_remote_directory)	# Mudança de diretório ftp para o diretorio principal
-			lst_arquivos_ftp = list(ftp.nlst())
-			arr_files_not_matched = [match for match in lst_arquivos_ftp if extension in match]
-
-			if isDebug is False:
-				arr_files_upload = [match for match in arr_files if extension in match]
-				# arr_files_upload = arr_files.copy()
-
-				for file_actual in arr_files_upload:
-					file_name = path.basename(file_actual)
-					if file_name in arr_files_not_matched:
-						arr_files_upload.remove(file_actual)
-
-				for file_upload in arr_files_upload:
-					file_name = path.basename(file_upload)
-					file_size = stat(file_upload).st_size
-
-					file = open(file_upload, 'rb')  # arquivo para enviar
-					result_upload_file_ftp = ftp.storbinary(fr'STOR {file_name}', file)  # envia o arquivo
-					file.close()  # fecha  close file and FTP
-
-					sql_text = rf'''
-						INSERT INTO [apps_opendata_flatfiles].[dbo].[log_file_sent_client] ([rel_config_client_data_access_id], [filename_sent], [file_size_sent], [remote_directory_sent], [status_result_ftp]) 
-						VALUES ({rel_config_client_data_access_id}, '{file_name}', '{file_size}', '{ftp_remote_directory}', '{result_upload_file_ftp}')
-					'''
-					blnOk_Upload, total_execucao, error = sql.itemExecute(sql_text)
-					print(file_upload, '(', file_size, ') => ', result_upload_file_ftp, ' => ', blnOk_Upload)
-
-
-			if isList is True:
-				files = ''
+				ftp.cwd(ftp_remote_directory)	# Mudança de diretório ftp para o diretorio principal
 				lst_arquivos_ftp = list(ftp.nlst())
 				arr_files_not_matched = [match for match in lst_arquivos_ftp if extension in match]
-				for file_actual in arr_files_not_matched:
-					file_name = path.basename(file_actual)
-					files = files + '\n- File: '+ file_name
-				print('Arquivos do cliente:' + files)
 
-			# Fecha a conexao FTP
-			print('FTP - Fechando conexao')
-			ftp.quit()
-			print('FTP - Conexao fechada com sucesso')
+				if isDebug is False:
+					arr_files_upload = [match for match in arr_files if extension in match]
+					# arr_files_upload = arr_files.copy()
+
+					for file_actual in arr_files_upload:
+						file_name = path.basename(file_actual)
+						if file_name in arr_files_not_matched:
+							arr_files_upload.remove(file_actual)
+
+					for file_upload in arr_files_upload:
+						file_name = path.basename(file_upload)
+						file_size = stat(file_upload).st_size
+
+						file = open(file_upload, 'rb')  # arquivo para enviar
+						result_upload_file_ftp = ftp.storbinary(fr'STOR {file_name}', file)  # envia o arquivo
+						file.close()  # fecha  close file and FTP
+
+						sql_text = rf'''
+							INSERT INTO [apps_opendata_flatfiles].[dbo].[log_file_sent_client] ([rel_config_client_data_access_id], [filename_sent], [file_size_sent], [remote_directory_sent], [status_result_ftp]) 
+							VALUES ({rel_config_client_data_access_id}, '{file_name}', '{file_size}', '{ftp_remote_directory}', '{result_upload_file_ftp}')
+						'''
+						blnOk_Upload, total_execucao, error = sql.itemExecute(sql_text)
+						print(file_upload, '(', file_size, ') => ', result_upload_file_ftp, ' => ', blnOk_Upload)
+
+
+				if isList is True:
+					files = ''
+					lst_arquivos_ftp = list(ftp.nlst())
+					arr_files_not_matched = [match for match in lst_arquivos_ftp if extension in match]
+					for file_actual in arr_files_not_matched:
+						file_name = path.basename(file_actual)
+						files = files + '\n- File: '+ file_name
+					print('Arquivos do cliente:' + files)
+
+				# Fecha a conexao FTP
+				print('FTP - Fechando conexao')
+				ftp.quit()
+				print('FTP - Conexao fechada com sucesso')
 
 		send_notification(canal=slackMessage.GOOGLE_CHAT_URL_NOTIFICATION_SUCCESS, mensagem=fr'App FlatFiles - FTP - Processo finalizado com sucesso para o cliente: {config_client_name}')
 	except Exception as ex:
