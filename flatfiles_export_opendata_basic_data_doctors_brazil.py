@@ -41,8 +41,8 @@ def write_to_csv(path_csv):
             hcp.modified_date__v AS modified_date__v
         INTO [apps_opendata_flatfiles].[dbo].[Result_OpenData Basic Data - Doctors Brazil] 
         FROM
-            vod.dbo.hcp 
-        LEFT JOIN vod.dbo.address
+            vod.dbo.hcp WITH(NOLOCK) 
+        LEFT JOIN vod.dbo.address WITH(NOLOCK) 
                 ON hcp.vid__v = address.entity_vid__v
             AND address.address_status__v = 'A'
         WHERE
@@ -52,7 +52,7 @@ def write_to_csv(path_csv):
             
         SET NOCOUNT OFF
         SELECT * 
-        FROM [apps_opendata_flatfiles].[dbo].[Result_OpenData Basic Data - Doctors Brazil] 
+        FROM [apps_opendata_flatfiles].[dbo].[Result_OpenData Basic Data - Doctors Brazil] WITH(NOLOCK)  
     """
     df_date = pd.read_sql(sql_text, sql.getConn())
 
@@ -63,7 +63,7 @@ def write_to_csv(path_csv):
 def get_min_max_vid():
     list_result = sql.itemsList('''
         SELECT MIN(vid__v) AS vid_min, MAX(vid__v) AS vid_max  
-        FROM [apps_opendata_flatfiles].[dbo].[Result_OpenData Basic Data - Doctors Brazil] 
+        FROM [apps_opendata_flatfiles].[dbo].[Result_OpenData Basic Data - Doctors Brazil] WITH(NOLOCK)  
     ''')
 
     vid_min = 0

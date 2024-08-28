@@ -25,7 +25,7 @@ def write_to_csv(path_csv):
             modified_date__v as modified_date__v
         INTO [apps_opendata_flatfiles].[dbo].[Result_OpenData - Record Merged Brazil]
         FROM
-            vod.dbo.hcp
+            vod.dbo.hcp WITH(NOLOCK) 
         WHERE
             record_state__v = 'MERGED_INTO' 
             and primary_country__v = 'BR'
@@ -39,7 +39,7 @@ def write_to_csv(path_csv):
             record_merged_vid__v as record_merged_vid__v,
             modified_date__v as modified_date__v
         FROM
-            vod.dbo.hco
+            vod.dbo.hco WITH(NOLOCK) 
         WHERE
             record_state__v = 'MERGED_INTO' 
             and primary_country__v = 'BR'
@@ -47,7 +47,7 @@ def write_to_csv(path_csv):
             
         SET NOCOUNT OFF
         SELECT * 
-        FROM [apps_opendata_flatfiles].[dbo].[Result_OpenData - Record Merged Brazil] 
+        FROM [apps_opendata_flatfiles].[dbo].[Result_OpenData - Record Merged Brazil] WITH(NOLOCK)  
         ORDER BY
             1,
             2,
@@ -62,7 +62,7 @@ def write_to_csv(path_csv):
 def get_min_max_vid():
     list_result = sql.itemsList('''
         SELECT MIN(vid__v) AS vid_min, MAX(vid__v) AS vid_max  
-        FROM [apps_opendata_flatfiles].[dbo].[Result_OpenData - Record Merged Brazil] 
+        FROM [apps_opendata_flatfiles].[dbo].[Result_OpenData - Record Merged Brazil] WITH(NOLOCK)  
     ''')
 
     vid_min = 0
