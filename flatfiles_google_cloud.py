@@ -28,7 +28,6 @@ def list_files_bucket(bucket, blob_name='', extension='*'):
 		for blob in arr_blobs_specific:
 			blob_filename = blob.name.replace(blob_name + '/', '')
 			arr_result.append(blob_filename)
-
 			print(blob_name + blob_filename)
 
 		if extension != '*':
